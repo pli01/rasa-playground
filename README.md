@@ -1,3 +1,3 @@
 # rasa-playground
-sample data and model
+Demo sample data and model
 
