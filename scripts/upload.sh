@@ -40,16 +40,17 @@ curl -k -XPUT \
        -T data/rules.yml \
       "http://$rasa_host/api/rules"
 
-# replace responses
+# Responses are in domain.yml
+#  if you need mode responses out of domain.yml file use the following
 # TODO:  convert yaml/json from domain.yml ?
-echo "# responses"
-cat responses.json | jq '.' | \
-curl -k -XPUT \
-       -H "Authorization: Bearer $bearer" \
-       -H "Content-Type: application/json;charset=utf-8" \
-        -d @- \
-      "http://$rasa_host/api/responses"
-
+#echo "# responses"
+#cat responses.json | jq '.' | \
+#curl -k -XPUT \
+#       -H "Authorization: Bearer $bearer" \
+#       -H "Content-Type: application/json;charset=utf-8" \
+#        -d @- \
+#      "http://$rasa_host/api/responses"
+#
 # config
 echo "# config"
 curl -k -XPUT \
